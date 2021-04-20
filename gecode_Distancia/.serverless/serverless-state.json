@@ -175,7 +175,7 @@
                 "S3Bucket": {
                   "Ref": "ServerlessDeploymentBucket"
                 },
-                "S3Key": "serverless/gecode-distancia/dev/1616961400382-2021-03-28T19:56:40.382Z/gecode-distancia.zip"
+                "S3Key": "serverless/gecode-distancia/dev/1618879463436-2021-04-20T00:44:23.436Z/gecode-distancia.zip"
               },
               "Handler": "handler.geoCodeDistancia",
               "Runtime": "nodejs12.x",
@@ -193,14 +193,14 @@
               "GeoCodeDistanciaLogGroup"
             ]
           },
-          "GeoCodeDistanciaLambdaVersion08LiIUhw3c8bU9KmnZ9TZBT7aNBTOnPjEaHu8E4": {
+          "GeoCodeDistanciaLambdaVersionRmNP0BL7ewUG11WonXuqPIvKjxXPKN4ib71zuxXL8": {
             "Type": "AWS::Lambda::Version",
             "DeletionPolicy": "Retain",
             "Properties": {
               "FunctionName": {
                 "Ref": "GeoCodeDistanciaLambdaFunction"
               },
-              "CodeSha256": "8uoYjCmIhN+tV2Ttp1C10jxm9W8tHDnZ4oUh3fVt+4c="
+              "CodeSha256": "++WI0OHtvQev/boBl8W2BPc8+GyjHw7uOz8WnD/I7LI="
             }
           },
           "ApiGatewayRestApi": {
@@ -297,7 +297,7 @@
               "MethodResponses": []
             }
           },
-          "ApiGatewayDeployment1616961393861": {
+          "ApiGatewayDeployment1618879461311": {
             "Type": "AWS::ApiGateway::Deployment",
             "Properties": {
               "RestApiId": {
@@ -356,7 +356,7 @@
           "GeoCodeDistanciaLambdaFunctionQualifiedArn": {
             "Description": "Current Lambda function version",
             "Value": {
-              "Ref": "GeoCodeDistanciaLambdaVersion08LiIUhw3c8bU9KmnZ9TZBT7aNBTOnPjEaHu8E4"
+              "Ref": "GeoCodeDistanciaLambdaVersionRmNP0BL7ewUG11WonXuqPIvKjxXPKN4ib71zuxXL8"
             }
           },
           "ServiceEndpoint": {
@@ -501,7 +501,7 @@
         "timeout": 6,
         "runtime": "nodejs12.x",
         "vpc": {},
-        "versionLogicalId": "GeoCodeDistanciaLambdaVersion08LiIUhw3c8bU9KmnZ9TZBT7aNBTOnPjEaHu8E4"
+        "versionLogicalId": "GeoCodeDistanciaLambdaVersionRmNP0BL7ewUG11WonXuqPIvKjxXPKN4ib71zuxXL8"
       }
     },
     "configValidationMode": "warn",
@@ -528,7 +528,7 @@
     "artifact": "D:\\Breno\\Projetos\\geocode_Distancia\\gecode_Distancia\\.serverless\\gecode-distancia.zip"
   },
   "package": {
-    "artifactDirectoryName": "serverless/gecode-distancia/dev/1616961400382-2021-03-28T19:56:40.382Z",
+    "artifactDirectoryName": "serverless/gecode-distancia/dev/1618879463436-2021-04-20T00:44:23.436Z",
     "artifact": "gecode-distancia.zip"
   }
 }

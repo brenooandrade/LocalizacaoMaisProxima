@@ -48,7 +48,7 @@ async function Ordenar(vListaLocais) {
         vLocalProximo =  vListaLocais.sort(dynamicSort("Distancia"));
         resolve(); 
       });         
-      resolve(vLocalProximo[0]);
+      resolve(vLocalProximo);
     } catch (error) {
       reject(error);
     }
@@ -76,21 +76,21 @@ module.exports.geoCodeDistancia = async (event, context, callback) => {
         })
       };
   } catch(error) {
-    resolve(
-      {
-        statusCode: 400,
-        headers: {
-          "Access-Control-Allow-Origin" : "*", // Required for CORS support to work
-          "Access-Control-Allow-Credentials" : true // Required for cookies, authorization headers with HTTPS 
-        },  
-        body: JSON.stringify(
-          {
-            code: "BadRequest",
-            sucesso: false,
-            message: `Erro ao executar função: ${error}`
-          })
-      }
-    );
+    return {
+      statusCode: 400,
+      headers: {
+        "Access-Control-Allow-Origin" : "*", // Required for CORS support to work
+        "Access-Control-Allow-Credentials" : true // Required for cookies, authorization headers with HTTPS 
+      },
+      body: JSON.stringify(
+        {
+          code: "BadRequest",
+          parametros: event.pathParameters,
+          body: event.body,
+          sucesso: false,
+          message: `Erro ao executar função: ${error}`
+        })
+      };
   }  
 
 
